@@ -4,16 +4,15 @@
   </head>
   <body>
     <h1>My Digital Notebook</h1>
-    <form action="/send_request" method="post">
-      <textarea name="text" rows="5" cols="30"></textarea><br>
+    <form action="{{ url_for('send_request') }}" method="post">
+      <textarea name="text" rows="4" cols="50"></textarea>
+      <br><br>
       <input type="submit" value="Generate Text">
     </form>
+    <br><br>
     <h2>Generated Text</h2>
-    <ul>
-      {% for data in data_list %}
-        <li>{{ data }}</li>
-      {% endfor %}
-    </ul>
+    {% for note in notes %}
+      <p>{{ note.text }}</p>
+    {% endfor %}
   </body>
 </html>
-
