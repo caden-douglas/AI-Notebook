@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>My Digital Notebook</title>
+  </head>
+  <body>
+    <h1>My Digital Notebook</h1>
+    <form action="/send_request" method="post">
+      <textarea name="text" rows="5" cols="30"></textarea><br>
+      <input type="submit" value="Generate Text">
+    </form>
+    <h2>Generated Text</h2>
+    <ul>
+      {% for data in data_list %}
+        <li>{{ data }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
