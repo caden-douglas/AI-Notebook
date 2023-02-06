@@ -36,9 +36,6 @@ def index():
     # Render the data in the template
     return render_template('index.html', data=data)
 
-if __name__ == "__main__":
-    from werkzeug.serving import run_simple
-    run_simple("localhost", 3000, app, use_reloader=True)
 
 @app.route('/send_request', methods=['GET', 'POST'])
 def send_request():
