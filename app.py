@@ -36,7 +36,6 @@ def index():
     # Render the data in the template
     return render_template('index.html', data=data)
 
-
 @app.route('/send_request', methods=['GET', 'POST'])
 def send_request():
     """
